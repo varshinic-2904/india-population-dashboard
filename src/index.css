@@ -1,0 +1,101 @@
+@import "tailwindcss";
+
+#root {
+  min-height: 100vh;
+}
+
+:root {
+  --bg-primary: #f5f7fb;
+  --bg-card: #ffffff;
+
+  --text-primary: #1f2937;
+  --text-secondary: #6b7280;
+
+  --primary: #6366f1;
+  --primary-light: #818cf8;
+
+  --hero-gradient:
+    linear-gradient(
+      135deg,
+      #4f46e5,
+      #7c3aed,
+      #9333ea
+    );
+
+  --shadow:
+    0 12px 32px rgba(
+      99,
+      102,
+      241,
+      0.15
+    );
+
+  --shadow-hover:
+    0 18px 40px rgba(
+      99,
+      102,
+      241,
+      0.25
+    );
+
+  --border-radius: 20px;
+}
+
+[data-theme="dark"] {
+  --bg-primary: #0f172a;
+
+  --bg-card: #1e293b;
+
+  --text-primary: #f8fafc;
+
+  --text-secondary: #cbd5e1;
+
+  --primary: #8b5cf6;
+
+  --primary-light: #a78bfa;
+
+  --hero-gradient:
+    linear-gradient(
+      135deg,
+      #312e81,
+      #5b21b6,
+      #6d28d9
+    );
+
+  --shadow:
+    0 12px 32px rgba(
+      0,
+      0,
+      0,
+      0.4
+    );
+
+  --shadow-hover:
+    0 18px 40px rgba(
+      0,
+      0,
+      0,
+      0.5
+    );
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--bg-primary);
+
+  color: var(--text-primary);
+
+  transition:
+    background 0.3s,
+    color 0.3s;
+
+  font-family:
+    Inter,
+    Arial,
+    sans-serif;
+}

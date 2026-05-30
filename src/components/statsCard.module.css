@@ -1,0 +1,25 @@
+.card {
+  border-radius: 18px;
+  padding: 24px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+  transition: all 0.3s ease;
+  background: var(--bg-card);
+  color: var(--text-primary);
+  border-top: 5px solid var(--primary);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h3 {
+  color: #6b7280;
+  font-size: 14px;
+}
+
+.card p {
+  margin-top: 12px;
+  font-size: 30px;
+  font-weight: 700;
+  color: #4338ca;
+}

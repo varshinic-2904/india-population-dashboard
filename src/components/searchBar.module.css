@@ -1,0 +1,15 @@
+.search {
+  width: 100%;
+  padding: 16px;
+  border: none;
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.08);
+  font-size: 16px;
+  background: var(--bg-card);
+  color: var(--text-primary);
+}
+
+.search:focus {
+  outline: 3px solid #818cf8;
+}

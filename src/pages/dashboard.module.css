@@ -1,0 +1,52 @@
+.dashboard {
+  padding: 40px;
+  max-width: 1400px;
+  margin: auto;
+}
+
+.hero {
+  padding: 50px;
+  border-radius: 28px;
+  background:
+    linear-gradient(
+      135deg,
+      #4f46e5,
+      #7c3aed,
+      #9333ea
+    );
+  color: white;
+  margin-bottom: 32px;
+  box-shadow:
+    0 20px 40px rgba(99,102,241,0.3);
+}
+
+.hero h1 {
+  font-size: 48px;
+}
+
+.hero p {
+  margin-top: 10px;
+  font-size: 18px;
+  opacity: 0.9;
+}
+
+.statsGrid {
+  display: grid;
+  grid-template-columns:
+    repeat(auto-fit, minmax(240px, 1fr));
+
+  gap: 20px;
+
+  margin-bottom: 30px;
+}
+
+.searchContainer {
+  margin-bottom: 30px;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
