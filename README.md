@@ -1,73 +1,201 @@
-# React + TypeScript + Vite
+# India Population Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+An interactive dashboard built with React and TypeScript to visualize population statistics across Indian states.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+This project was created to explore:
 
-## React Compiler
+* Responsive UI development
+* Data visualization using Recharts
+* Component-based architecture in React
+* Theme management with Light and Dark modes
+* TypeScript for type safety
+* CSS Modules for maintainable styling
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+The dashboard provides a simple way to explore population data through analytics cards, search functionality, and interactive charts.
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Population Analytics
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+* Total population summary
+* Number of states
+* Highest population state
+* Average population
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Search Functionality
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+* Search states by name
+* Dynamic chart updates based on search results
+
+### Data Visualization
+
+* Interactive bar chart using Recharts
+* Population comparison across states
+* Tooltip support for detailed values
+
+### Theming
+
+* Light mode
+* Dark mode
+* Theme persistence using localStorage
+
+### Responsive Design
+
+* Desktop-friendly layout
+* Tablet support
+* Mobile-responsive design
+
+## Tech Stack
+
+### Frontend
+
+* React
+* TypeScript
+* Vite
+
+### Charts
+
+* Recharts
+
+### Styling
+
+* CSS Modules
+* CSS Variables
+
+### State Management
+
+* React Context API
+* React Hooks
+
+## Project Structure
+
+```text
+src
+├── components
+│   ├── PopulationChart
+│   ├── SearchBar
+│   ├── StatsCard
+│   └── ThemeToggle
+│
+├── context
+│   └── ThemeContext
+│
+├── data
+│   └── populationData
+│
+├── pages
+│   └── Dashboard
+│
+├── App.tsx
+└── main.tsx
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Architecture Decisions
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+### Why React?
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+React provides a component-based architecture that promotes reusability and maintainability.
+
+### Why TypeScript?
+
+TypeScript improves code reliability through static typing and provides better developer tooling.
+
+### Why Context API?
+
+The application only requires a small amount of global state for theme management. Context API provides a lightweight solution without introducing additional dependencies.
+
+### Why CSS Modules?
+
+CSS Modules prevent style leakage and keep component styles isolated, making the codebase easier to maintain.
+
+### Why Recharts?
+
+Recharts integrates naturally with React and provides responsive, customizable chart components.
+
+## Running the Project
+
+### Prerequisites
+
+* Node.js 18+
+* npm
+
+### Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/varshinic-2904/india-population-dashboard.git
 ```
+
+Navigate to the project:
+
+```bash
+cd india-population-dashboard
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the development server:
+
+```bash
+npm run dev
+```
+
+Open:
+
+```
+http://localhost:5173
+```
+
+## Available Scripts
+
+```bash
+npm run dev
+```
+
+Runs the application in development mode.
+
+```bash
+npm run build
+```
+
+Creates a production build.
+
+```bash
+npm run preview
+```
+
+Previews the production build locally.
+
+## Future Improvements
+
+* Integration with live Census data APIs
+* Additional chart types and visualizations
+* State comparison functionality
+* Export dashboard data
+* Unit and integration testing
+* Accessibility improvements
+* Advanced filtering and sorting
+* Performance optimization for larger datasets
+
+## Learning Outcomes
+
+This project helped strengthen my understanding of:
+
+* React component design
+* TypeScript type safety
+* Data visualization techniques
+* Theme management
+* CSS architecture
+* Responsive design patterns
+* State management with Context API
+
+## Author
+
+Varshini C
